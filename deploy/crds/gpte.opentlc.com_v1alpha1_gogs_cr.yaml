@@ -1,0 +1,9 @@
+apiVersion: gpte.opentlc.com/v1alpha1
+kind: Gogs
+metadata:
+  name: gogs-server
+spec:
+  size: 1
+  postgresqlVolumeSize: 4Gi
+  gogsVolumeSize: 4Gi
+  gogsSsl: True"

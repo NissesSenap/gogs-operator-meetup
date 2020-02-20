@@ -24,8 +24,8 @@ export QUAY_PASSWORD='supersecretpassword123'
 podman login -u ${QUAY_ID} -p ${QUAY_PASSWORD} quay.io
 
 # Build the operator
-operator-sdk build quay.io/${QUAY_ID}/gogs-operator:v0.0.3
-podman push quay.io/${QUAY_ID}/gogs-operator:v0.0.3
+operator-sdk build quay.io/${QUAY_ID}/gogs-operator:v0.0.4
+podman push quay.io/${QUAY_ID}/gogs-operator:v0.0.4
 ```
 
 Update the ./deploy/operator.yaml file to match your container.
@@ -34,7 +34,7 @@ In my case i update it with: quay.io/nissessenap/gogs-operator:<tag version>
 ### Deploy pre-requierments
 
 Time to create the CRD, have a look at:
-cat ./deploy/crds/gpte_v1alpha1_gogs_crd.yaml
+./deploy/crds/gpte.opentlc.com_gogs_crd.yaml
 
 Take a look at the rbac rules
 cat ./gogs-admin-rbac.yaml
